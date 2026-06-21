@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Thư bí mật ❤️</title>
+
+<style>
+body{
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+color:white;
+overflow:hidden;
+}
+
+.box{
+text-align:center;
+z-index:10;
+}
+
+input{
+padding:12px;
+border:none;
+border-radius:20px;
+width:220px;
+text-align:center;
+}
+
+button{
+padding:10px 20px;
+margin-top:15px;
+border:none;
+border-radius:20px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+}
+
+#letter{
+display:none;
+max-width:600px;
+padding:20px;
+}
+
+.heart{
+position:absolute;
+font-size:25px;
+animation:fly 7s linear infinite;
+}
+
+@keyframes fly{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box" id="login">
+
+<h1>🔒 Thư bí mật</h1>
+
+<p>Nhập mật khẩu để mở</p>
+
+<input type="password" id="pass" placeholder="Mật khẩu">
+
+<br>
+
+<button onclick="checkPass()">Mở thư</button>
+
+<p id="msg"></p>
+
+</div>
+
+<div class="box" id="letter">
+
+<h1>❤️ Gửi đến người đặc biệt ❤️</h1>
+
+<p>
+
+ Dear love,
+Juky đã suy nghĩ rất nhiều trước khi viết ra những lời này…
+Tớ thật lòng muốn nói là xin lỗi Minh. Tớ biết chuyện cậu thích mình là một chuyện rất riêng tư, nhưng mình lại vô tư kể cho người khác nghe. Là lỗi Juky không nghĩ thấu đáo. Juky thấy mình mới hiểu việc đó đã làm cậu tổn thương và thất vọng thế nào.
+Juky không viết thư này để biện minh cho bản thân. Hy vọng Minh có thể biết rằng jk thật sự hối hận. Nếu được quay lại, jk nhất định sẽ giữ bí mật đó cho của riêng.
+Có một điều mà mình đã mất rất lâu mới dám thừa nhận.
+Lúc biết Minh thích jk, jk đã rất bối rối.  Thật sự không biết phải đối diện với tình cảm ấy thế nào, cũng không biết bản thân đang nghĩ gì. Thế giới của Minh thật sự quá kín. Jk cũng chỉ có thể tiếp xúc qua những accrole khác chứ không được mấy lần nói chuyện bình thường với Minh. 
+Juky nhận ra mình không chỉ cảm thấy có lỗi.
+<Juky rất thích Hải Minh. Rất yêu lắm moazh:33>
+Có thể Minh sẽ giận jk rất nhiều, có thể cậu không còn thích như trước nữa. Nhưng jk vẫn muốn nói ra, vì không muốn sau này phải hối tiếc rằng mình đã im lặng.
+Juky không mong Minh sẽ tha thứ, cũng không mong được đáp lại tình cảm của ngay bây giờ.
+Mình chỉ mong cậu biết rằng:
+ Jk thật lòng xin lỗi và thật lòng thích Minh.
+Nếu sau khi đọc những dòng này, Minh vẫn muốn nói chuyện với jk, jk sẽ rất vui. Còn nếu không, jk vẫn sẽ tôn trọng quyết định của Minh.
+Cảm ơn cậu vì đã từng thích mình. Và cảm ơn Minh đã không ghét jk...
+                                                                             — Người thích cậu.
+
+
+</p>
+
+</div>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function checkPass(){
+
+let pass=document.getElementById("pass").value;
+
+if(pass==="2510"){
+
+document.getElementById("login").style.display="none";
+
+document.getElementById("letter").style.display="block";
+
+document.getElementById("music").play();
+
+}else{
+
+document.getElementById("msg").innerHTML="❌ Sai mật khẩu rồi";
+
+}
+
+}
+
+function createHeart(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000)
+
+}
+
+setInterval(createHeart,400);
+
+</script>
+
+</body>
+</html>
