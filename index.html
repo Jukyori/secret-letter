@@ -1,66 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Thư bí mật ❤️</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-background:#000;
-display:flex;
-justify-content:center;
-align-items:center;
+
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
+
+background-size:400% 400%;
+
+animation:bgmove 15s ease infinite;
+
 height:100vh;
-font-family:Arial;
-color:white;
+
 overflow:hidden;
+
+font-family:Arial,sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+}
+
+@keyframes bgmove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
 }
 
 .box{
-text-align:center;
+
+width:90%;
+
+max-width:700px;
+
+background:rgba(0,0,0,0.35);
+
+backdrop-filter:blur(15px);
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 0 40px rgba(0,0,0,0.2);
+
 z-index:10;
+
+animation:appear 1s;
+
+}
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+h1{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+line-height:1.8;
+
+font-size:18px;
+
 }
 
 input{
-padding:12px;
+
+width:100%;
+
+padding:15px;
+
 border:none;
+
 border-radius:20px;
-width:220px;
+
+outline:none;
+
+font-size:17px;
+
 text-align:center;
+
+margin-top:15px;
+
 }
 
 button{
-padding:10px 20px;
+
+width:100%;
+
+padding:14px;
+
 margin-top:15px;
+
 border:none;
+
 border-radius:20px;
-background:#ff4d6d;
+
+background:#ff4d88;
+
 color:white;
+
+font-size:18px;
+
 cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
 }
 
 #letter{
+
 display:none;
-max-width:600px;
-padding:20px;
+
+max-height:80vh;
+
+overflow-y:auto;
+
+}
+
+#msg{
+
+margin-top:15px;
+
+text-align:center;
+
 }
 
 .heart{
+
 position:absolute;
+
 font-size:25px;
-animation:fly 7s linear infinite;
+
+animation:fly 8s linear infinite;
+
+opacity:0.8;
+
 }
 
 @keyframes fly{
+
 from{
+
 transform:translateY(100vh);
+
 opacity:1;
+
 }
+
 to{
-transform:translateY(-100px);
+
+transform:translateY(-120px);
+
 opacity:0;
+
 }
+
 }
+
 </style>
 
 </head>
@@ -71,48 +216,197 @@ opacity:0;
 
 <h1>🔒 Thư bí mật</h1>
 
-<p>Nhập mật khẩu để mở</p>
+<p style="text-align:center">
 
-<input type="password" id="pass" placeholder="Mật khẩu">
+Có một người đã để rất nhiều điều trong lá thư này...
 
-<br>
+</p>
 
-<button onclick="checkPass()">Mở thư</button>
+<input
+
+type="password"
+
+id="pass"
+
+placeholder="Nhập mật khẩu">
+
+<button onclick="checkPass()">
+
+Mở thư ❤️
+
+</button>
 
 <p id="msg"></p>
 
 </div>
 
+
+
 <div class="box" id="letter">
 
-<h1>❤️ Gửi đến người đặc biệt ❤️</h1>
+<h1>
+
+❤️ Gửi đến Hải Minh ❤️
+
+</h1>
 
 <p>
 
- Dear love,
-Juky đã suy nghĩ rất nhiều trước khi viết ra những lời này…
-Tớ thật lòng muốn nói là xin lỗi Minh. Tớ biết chuyện cậu thích mình là một chuyện rất riêng tư, nhưng mình lại vô tư kể cho người khác nghe. Là lỗi Juky không nghĩ thấu đáo. Juky thấy mình mới hiểu việc đó đã làm cậu tổn thương và thất vọng thế nào.
-Juky không viết thư này để biện minh cho bản thân. Hy vọng Minh có thể biết rằng jk thật sự hối hận. Nếu được quay lại, jk nhất định sẽ giữ bí mật đó cho của riêng.
-Có một điều mà mình đã mất rất lâu mới dám thừa nhận.
-Lúc biết Minh thích jk, jk đã rất bối rối.  Thật sự không biết phải đối diện với tình cảm ấy thế nào, cũng không biết bản thân đang nghĩ gì. Thế giới của Minh thật sự quá kín. Jk cũng chỉ có thể tiếp xúc qua những accrole khác chứ không được mấy lần nói chuyện bình thường với Minh. 
-Juky nhận ra mình không chỉ cảm thấy có lỗi.
-❤️ Juky rất thích Hải Minh. Rất yêu lắm moazh :33
-Có thể Minh sẽ giận jk rất nhiều, có thể cậu không còn thích như trước nữa. Nhưng jk vẫn muốn nói ra, vì không muốn sau này phải hối tiếc rằng mình đã im lặng.
-Juky không mong Minh sẽ tha thứ, cũng không mong được đáp lại tình cảm của ngay bây giờ.
-Mình chỉ mong cậu biết rằng:
- Jk thật lòng xin lỗi và thật lòng thích Minh.
-Nếu sau khi đọc những dòng này, Minh vẫn muốn nói chuyện với jk, jk sẽ rất vui. Còn nếu không, jk vẫn sẽ tôn trọng quyết định của Minh.
-Cảm ơn cậu vì đã từng thích mình. Và cảm ơn Minh đã không ghét jk...
-                                                                             — Người thích cậu.
+Dear love,
 
+<br><br>
+
+Juky đã suy nghĩ rất nhiều trước khi viết ra những lời này…
+
+<br><br>
+
+Tớ thật lòng muốn nói là xin lỗi Minh.
+
+Tớ biết chuyện cậu thích mình là một chuyện rất riêng tư,
+
+nhưng mình lại vô tư kể cho người khác nghe.
+
+Là lỗi Juky không nghĩ thấu đáo.
+
+Juky thấy mình mới hiểu việc đó đã làm cậu tổn thương
+
+và thất vọng thế nào.
+
+<br><br>
+
+Juky không viết thư này để biện minh cho bản thân.
+
+Hy vọng Minh có thể biết rằng
+
+jk thật sự hối hận.
+
+Nếu được quay lại,
+
+jk nhất định sẽ giữ bí mật đó cho của riêng.
+
+<br><br>
+
+Có một điều mà mình đã mất rất lâu
+
+mới dám thừa nhận.
+
+<br><br>
+
+Lúc biết Minh thích jk,
+
+jk đã rất bối rối.
+
+Thật sự không biết phải đối diện
+
+với tình cảm ấy thế nào,
+
+cũng không biết bản thân đang nghĩ gì.
+
+<br><br>
+
+Thế giới của Minh thật sự quá kín.
+
+Jk cũng chỉ có thể tiếp xúc
+
+qua những acc role khác
+
+chứ không được mấy lần
+
+nói chuyện bình thường với Minh.
+
+<br><br>
+
+Juky nhận ra mình
+
+không chỉ cảm thấy có lỗi.
+
+<br><br>
+
+❤️
+
+<b style="font-size:25px">
+
+Juky rất thích Hải Minh.
+
+Rất yêu lắm moazh :33
+
+</b>
+
+❤️
+
+<br><br>
+
+Có thể Minh sẽ giận jk rất nhiều,
+
+có thể cậu không còn thích như trước nữa.
+
+<br><br>
+
+Nhưng jk vẫn muốn nói ra,
+
+vì không muốn sau này
+
+phải hối tiếc rằng
+
+mình đã im lặng.
+
+<br><br>
+
+Juky không mong Minh sẽ tha thứ,
+
+cũng không mong được đáp lại
+
+tình cảm của ngay bây giờ.
+
+<br><br>
+
+Mình chỉ mong cậu biết rằng:
+
+<br><br>
+
+❤️ Jk thật lòng xin lỗi
+
+và
+
+thật lòng thích Minh.
+
+<br><br>
+
+Nếu sau khi đọc những dòng này,
+
+Minh vẫn muốn nói chuyện với jk,
+
+jk sẽ rất vui.
+
+<br><br>
+
+Còn nếu không,
+
+jk vẫn sẽ tôn trọng quyết định của Minh.
+
+<br><br>
+
+Cảm ơn cậu
+
+vì đã từng thích mình.
+
+<br><br>
+
+Và cảm ơn Minh
+
+đã không ghét jk...
+
+<br><br>
+
+<div style="text-align:right">
+
+— Người thích cậu ❤️
+
+</div>
 
 </p>
 
 </div>
-
-<audio id="music" loop>
-<source src="music.mp3" type="audio/mpeg">
-</audio>
 
 <script>
 
@@ -126,15 +420,17 @@ document.getElementById("login").style.display="none";
 
 document.getElementById("letter").style.display="block";
 
-document.getElementById("music").play();
-
 }else{
 
-document.getElementById("msg").innerHTML="❌ Sai mật khẩu rồi";
+document.getElementById("msg").innerHTML=
+
+"❌ Sai mật khẩu rồi";
 
 }
 
 }
+
+
 
 function createHeart(){
 
@@ -146,17 +442,22 @@ heart.innerHTML="❤️";
 
 heart.style.left=Math.random()*100+"vw";
 
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
 document.body.appendChild(heart);
 
 setTimeout(()=>{
+
 heart.remove();
-},7000)
+
+},8000)
 
 }
 
-setInterval(createHeart,400);
+setInterval(createHeart,350);
 
 </script>
 
 </body>
+
 </html>
